@@ -9,13 +9,15 @@ namespace SzerverApp.Controllers
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private IGuidService _guidService;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IGuidService guidService)
         {
             _logger = logger;
+            _guidService = guidService;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -28,6 +30,12 @@ namespace SzerverApp.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        //ENDPOINT CREATION
+        [HttpGet("guid")]
+        public string GetGuid() 
+        { 
+            return _guidService.Guid.ToString();
         }
     }
 }
