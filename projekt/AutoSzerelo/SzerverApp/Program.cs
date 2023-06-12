@@ -1,6 +1,11 @@
+using Serilog;
 using SzerverApp;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+//LOGLOLÁSHOZ A KÓD
+builder.Host.UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration.MinimumLevel.Debug().WriteTo.Console());
 
 // Add services to the container.
 
