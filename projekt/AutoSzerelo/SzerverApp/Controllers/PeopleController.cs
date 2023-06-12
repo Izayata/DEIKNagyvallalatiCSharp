@@ -14,14 +14,27 @@ namespace SzerverApp.Controllers
         }
         //
 
-        ///ENDPONTOK DEFINIÁLÁSA
-        //GET METÓDUS
+        ///VÉGPONTOK DEFINIÁLÁSA
+        //GET METÓDUS - GetAll()
         [HttpGet]
         public ActionResult<IEnumerable<Person>> GetAll()
         { 
             var people = _personRepository.GetAll();
 
             return Ok(people);
+        }
+
+        //GET METÓDUS - GetSinglePerson
+        [HttpGet("{id}")]
+        public ActionResult<Person> Get(int id)
+        { 
+            var person = _personRepository.Get(id);
+            if (person is null)
+            {
+                return NotFound();
+            }
+            
+            return Ok(person);
         }
 
 
