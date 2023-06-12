@@ -1,6 +1,10 @@
-﻿namespace SzerverApp.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace SzerverApp.Controllers
 {
-    public class PeopleController
+    [ApiController]
+    [Route("[controller]")]
+    public class PeopleController : ControllerBase
     {
     }
 }
