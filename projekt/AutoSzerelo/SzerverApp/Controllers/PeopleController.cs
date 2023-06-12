@@ -13,5 +13,23 @@ namespace SzerverApp.Controllers
             _personRepository = personRepository;
         }
         //
+
+        ///ENDPONTOK DEFINIÁLÁSA
+        //GET METÓDUS
+        [HttpGet]
+        public ActionResult<IEnumerable<Person>> Get()
+        { 
+            var people = _personRepository.GetAll();
+
+            return Ok(people);
+        }
+
+
+
+
+
+
+
+
     }
 }
