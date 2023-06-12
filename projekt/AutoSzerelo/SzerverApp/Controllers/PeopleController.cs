@@ -67,9 +67,27 @@ namespace SzerverApp.Controllers
                 return NotFound();
             }
 
+
             _personRepository.Upsert(person);
+            
             return NoContent(); //lehet Ok() is, általában a delete esetén használják
 
+        }
+
+        //DELETE METÓDUS - Delete()
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var existingPerson = _personRepository.Get(id);
+            if (existingPerson is null)
+            {
+                return NotFound();
+            }
+
+
+            _personRepository.Delete(id);
+            
+            return NoContent();
         }
 
 
