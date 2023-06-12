@@ -15,6 +15,7 @@ namespace SzerverApp
         public string Email { get; set; }
 
         [Required]
+        [Range(typeof(DateTime), "1990-01-01", "2000-01-01")]
         public DateTime? BirthDate { get; set; }
     }
 }
