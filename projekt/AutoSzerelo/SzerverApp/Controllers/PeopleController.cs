@@ -24,7 +24,7 @@ namespace SzerverApp.Controllers
             return Ok(people);
         }
 
-        //GET METÓDUS - GetSinglePerson
+        //GET METÓDUS - GetSinglePerson(int id)
         [HttpGet("{id}")]
         public ActionResult<Person> GetSinglePerson(int id)
         { 
@@ -38,6 +38,26 @@ namespace SzerverApp.Controllers
         }
 
 
+        //ADD METÓDUS - Post()
+        [HttpPost]
+        public IActionResult Post([FromBody] Person person)
+        {
+            var existingPerson = _personRepository.Get(person.Id);
+            if (existingPerson is not null)
+            { 
+                return Conflict();
+            }
+
+            _personRepository.Upsert(person);
+            return Ok();
+        }
+
+        /*//UPDATE METÓDUS - Put()
+        [HttpPut]
+        public IActionResult Put(int id, [FromBody] Person person)
+        { 
+            
+        }*/
 
 
 
