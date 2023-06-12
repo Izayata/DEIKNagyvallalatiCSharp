@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 //LOGLOLÁSHOZ A KÓD
-builder.Host.UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration.MinimumLevel.Debug().WriteTo.Console());
+builder.Host.UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration.MinimumLevel.Debug().WriteTo.Console()); //.WriteTo.File("log.txt", rollingInterval: RollingInterval.Day) --> Log fájlba iratása
 
 // Add services to the container.
 

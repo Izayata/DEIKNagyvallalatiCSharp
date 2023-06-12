@@ -8,9 +8,11 @@ namespace SzerverApp.Controllers
     {
         //Dependency Injection Konstruktorral megoldva
         private readonly IPersonRepository _personRepository;
-        public PeopleController(IPersonRepository personRepository)
+        private readonly ILogger<PeopleController> _logger;
+        public PeopleController(IPersonRepository personRepository, ILogger<PeopleController> logger)
         {
             _personRepository = personRepository;
+            _logger = logger;
         }
         //
 
@@ -18,7 +20,8 @@ namespace SzerverApp.Controllers
         //GET METÓDUS - GetAll()
         [HttpGet]
         public ActionResult<IEnumerable<Person>> GetAll()
-        { 
+        {
+            _logger.LogInformation("People endpoint 'GetAll' was called");
             var people = _personRepository.GetAll();
 
             return Ok(people);
