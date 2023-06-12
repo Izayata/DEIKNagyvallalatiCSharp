@@ -12,12 +12,12 @@
 
         public Person Get(int id)
         {
-            throw new NotImplementedException();
+            return _people.TryGetValue(id, out var person) ? person : null;
         }
 
         public IEnumerable<Person> GetAll()
         {
-            throw new NotImplementedException();
+            return _people.Values;
         }
 
         public void Upsert(Person person)
