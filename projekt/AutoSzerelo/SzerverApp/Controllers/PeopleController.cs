@@ -52,12 +52,25 @@ namespace SzerverApp.Controllers
             return Ok();
         }
 
-        /*//UPDATE METÓDUS - Put()
-        [HttpPut]
+        //UPDATE METÓDUS - Put()
+        [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Person person)
-        { 
-            
-        }*/
+        {
+            if (id != person.Id)
+            { 
+                return BadRequest();
+            }
+
+            var existingPerson = _personRepository.Get(id);
+            if (existingPerson is null)
+            { 
+                return NotFound();
+            }
+
+            _personRepository.Upsert(person);
+            return NoContent(); //lehet Ok() is, általában a delete esetén használják
+
+        }
 
 
 
