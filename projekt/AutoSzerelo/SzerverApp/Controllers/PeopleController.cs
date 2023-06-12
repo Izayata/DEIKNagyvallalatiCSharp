@@ -17,7 +17,7 @@ namespace SzerverApp.Controllers
         ///ENDPONTOK DEFINIÁLÁSA
         //GET METÓDUS
         [HttpGet]
-        public ActionResult<IEnumerable<Person>> Get()
+        public ActionResult<IEnumerable<Person>> GetAll()
         { 
             var people = _personRepository.GetAll();
 
