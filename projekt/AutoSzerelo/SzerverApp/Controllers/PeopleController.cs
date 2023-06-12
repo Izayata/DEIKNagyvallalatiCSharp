@@ -26,7 +26,7 @@ namespace SzerverApp.Controllers
 
         //GET METÓDUS - GetSinglePerson
         [HttpGet("{id}")]
-        public ActionResult<Person> Get(int id)
+        public ActionResult<Person> GetSinglePerson(int id)
         { 
             var person = _personRepository.Get(id);
             if (person is null)
