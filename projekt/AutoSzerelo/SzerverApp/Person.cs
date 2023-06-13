@@ -20,5 +20,12 @@ namespace SzerverApp
         //[Required]
         //[Range(typeof(DateTime), "1990-01-01", "2000-01-01")]
         public DateTime? BirthDate { get; set; } //A ? miatt nullable lesz ez a field (nem kötelező kitölteni), a [Required] annotáció felülírja a ?-ecskét
+
+
+
+
+
+        //Item osztály hozzákapcsolása az osztályhoz
+        public virtual ICollection<Item> Items { get; set; }
     }
 }
