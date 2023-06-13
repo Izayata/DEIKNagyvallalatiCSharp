@@ -6,9 +6,10 @@ namespace SzerverApp
     public class Person
     {
         /// Validáció
-        [Key] //Elsődleges kulcs beállítása
+        //[Key] //Elsődleges kulcs beállítása
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //automatikus kulcs generálás
         public int Id { get; set; }
+        public int DuplicatedId { get; set; }
 
         [Required]
         //[MaxLength(25)]
@@ -24,8 +25,9 @@ namespace SzerverApp
 
 
 
-
+        /*
         //Item osztály hozzákapcsolása az osztályhoz
         public virtual ICollection<Item> Items { get; set; }
+        */
     }
 }

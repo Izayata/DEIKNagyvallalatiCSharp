@@ -45,7 +45,7 @@ namespace SzerverApp.Controllers
             return Ok(person);
         }
 
-
+        /*
         //GET METÓDUS - GetItems(int id)
         [HttpGet("{id}/items")]
         public async Task<ActionResult<Person>> GetItems(int id)
@@ -59,7 +59,7 @@ namespace SzerverApp.Controllers
 
             return Ok(person.Items);
         }
-
+        */
 
 
 

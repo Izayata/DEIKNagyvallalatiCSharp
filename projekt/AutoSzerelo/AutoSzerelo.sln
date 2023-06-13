@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SzerverApp", "SzerverApp\SzerverApp.csproj", "{E4B1BFB8-DD64-4BEB-AB5E-C4FF088C622D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IrodaiKliensApp", "IrodaiKliensApp\IrodaiKliensApp.csproj", "{283E339A-8DF9-44F8-B268-D428EDF88CB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E4B1BFB8-DD64-4BEB-AB5E-C4FF088C622D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4B1BFB8-DD64-4BEB-AB5E-C4FF088C622D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4B1BFB8-DD64-4BEB-AB5E-C4FF088C622D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{283E339A-8DF9-44F8-B268-D428EDF88CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283E339A-8DF9-44F8-B268-D428EDF88CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283E339A-8DF9-44F8-B268-D428EDF88CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283E339A-8DF9-44F8-B268-D428EDF88CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
