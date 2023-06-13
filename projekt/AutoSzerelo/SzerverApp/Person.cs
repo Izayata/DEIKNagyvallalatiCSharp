@@ -19,6 +19,6 @@ namespace SzerverApp
 
         //[Required]
         //[Range(typeof(DateTime), "1990-01-01", "2000-01-01")]
-        public DateTime? BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; } //A ? miatt nullable lesz ez a field (nem kötelező kitölteni), a [Required] annotáció felülírja a ?-ecskét
     }
 }
