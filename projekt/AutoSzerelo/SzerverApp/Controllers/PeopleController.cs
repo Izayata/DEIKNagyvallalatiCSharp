@@ -46,6 +46,24 @@ namespace SzerverApp.Controllers
         }
 
 
+        //GET METÓDUS - GetItems(int id)
+        [HttpGet("{id}/items")]
+        public async Task<ActionResult<Person>> GetItems(int id)
+        {
+            //var person = _personRepository.Get(id);
+            var person = await _demoContext.People.FindAsync(id);
+            if (person is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(person.Items);
+        }
+
+
+
+
+
         //ADD METÓDUS - Post()
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Person person)

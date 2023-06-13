@@ -16,7 +16,9 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<DemoContext>(
     options =>
     {
-        options.UseSqlite(builder.Configuration.GetConnectionString("SQLite"));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb"));
+        options.UseLazyLoadingProxies();
+        
     });
 
 
