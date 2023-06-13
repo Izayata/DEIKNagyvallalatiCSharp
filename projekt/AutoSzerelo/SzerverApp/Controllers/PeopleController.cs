@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace SzerverApp.Controllers
 {
@@ -7,11 +8,13 @@ namespace SzerverApp.Controllers
     public class PeopleController : ControllerBase
     {
         //Dependency Injection Konstruktorral megoldva
-        private readonly IPersonRepository _personRepository;
+        private readonly DemoContext _demoContext;
+        //private readonly IPersonRepository _personRepository;
         private readonly ILogger<PeopleController> _logger;
-        public PeopleController(IPersonRepository personRepository, ILogger<PeopleController> logger)
+        public PeopleController(DemoContext demoContext, ILogger<PeopleController> logger)
         {
-            _personRepository = personRepository;
+            _demoContext = demoContext;
+            //_personRepository = personRepository;
             _logger = logger;
         }
         //
@@ -19,19 +22,21 @@ namespace SzerverApp.Controllers
         ///VÉGPONTOK DEFINIÁLÁSA
         //GET METÓDUS - GetAll()
         [HttpGet]
-        public ActionResult<IEnumerable<Person>> GetAll()
+        public async Task<ActionResult<IEnumerable<Person>>> GetAll()
         {
             _logger.LogInformation("People endpoint 'GetAll' was called");
-            var people = _personRepository.GetAll();
+            //var people = _personRepository.GetAll();
+            var people = await _demoContext.People.ToListAsync();
 
             return Ok(people);
         }
 
         //GET METÓDUS - GetSinglePerson(int id)
         [HttpGet("{id}")]
-        public ActionResult<Person> GetSinglePerson(int id)
-        { 
-            var person = _personRepository.Get(id);
+        public async Task<ActionResult<Person>> GetSinglePerson(int id)
+        {
+            //var person = _personRepository.Get(id);
+            var person = await _demoContext.People.FindAsync(id);
             if (person is null)
             {
                 return NotFound();
@@ -43,35 +48,34 @@ namespace SzerverApp.Controllers
 
         //ADD METÓDUS - Post()
         [HttpPost]
-        public IActionResult Post([FromBody] Person person)
+        public async Task<IActionResult> Post([FromBody] Person person)
         {
-            var existingPerson = _personRepository.Get(person.Id);
-            if (existingPerson is not null)
-            { 
-                return Conflict();
-            }
+            _demoContext.People.Add(person);
+            await _demoContext.SaveChangesAsync();
 
-            _personRepository.Upsert(person);
             return Ok();
         }
 
         //UPDATE METÓDUS - Put()
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Person person)
+        public async Task<IActionResult> Put(int id, [FromBody] Person person)
         {
             if (id != person.Id)
             { 
                 return BadRequest();
             }
 
-            var existingPerson = _personRepository.Get(id);
+            var existingPerson = await _demoContext.People.FindAsync(id);
             if (existingPerson is null)
             { 
                 return NotFound();
             }
 
 
-            _personRepository.Upsert(person);
+            existingPerson.Name = person.Name;
+            existingPerson.Email = person.Email;
+            existingPerson.BirthDate = person.BirthDate;
+            _demoContext.SaveChangesAsync();
             
             return NoContent(); //lehet Ok() is, általában a delete esetén használják
 
@@ -79,16 +83,20 @@ namespace SzerverApp.Controllers
 
         //DELETE METÓDUS - Delete()
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var existingPerson = _personRepository.Get(id);
+            //var existingPerson = _personRepository.Get(id);
+            var existingPerson = await _demoContext.People.FindAsync(id);
             if (existingPerson is null)
             {
                 return NotFound();
             }
 
 
-            _personRepository.Delete(id);
+            //_personRepository.Delete(id);
+            _demoContext.People.Remove(existingPerson);
+            await _demoContext.SaveChangesAsync(); //Ez a metódus frissíti az adatbázist
+            //érdemes try-catch segítségével kivételkezelést végezni a végleges produkcióhoz
             
             return NoContent();
         }
