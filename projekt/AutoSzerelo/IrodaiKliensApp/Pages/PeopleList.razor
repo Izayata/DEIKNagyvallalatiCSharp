@@ -1,6 +1,7 @@
 ﻿@page "/"
+@using IrodaiKliensApp.Services;
 @using SzerverApp.Contract;
-@inject HttpClient HttpClient
+@inject IPersonService PersonService
 
 
 @*Adatbázisban szereplő emberek kilistázása
@@ -45,6 +46,6 @@ else
     protected override async Task OnInitializedAsync()
     {
         //Lekérdezés a people listára
-        People = await HttpClient.GetFromJsonAsync<IEnumerable<Person>>("People");
+        People = await PersonService.GetAllPeopleAsync();
     }
 }

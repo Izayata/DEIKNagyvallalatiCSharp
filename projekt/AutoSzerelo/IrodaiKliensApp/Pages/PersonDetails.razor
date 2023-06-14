@@ -1,6 +1,22 @@
 ﻿@page "/person/{id:int}"
+@using SzerverApp.Contract
+@using IrodaiKliensApp.Services
+@inject IPersonService PersonService
 
-<h3>PersonDetails</h3>
+
+@if (Person is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h3>@Person.Name's details</h3>
+
+    <p>Name: @Person.Name</p>
+    <p>e-Mail: @Person.Email</p>
+    <p>Birth date: @Person.BirthDate</p>
+}
+
 
 
 
@@ -8,4 +24,11 @@
 @code {
     [Parameter]
     public int Id { get; set; }
+
+    private Person? Person { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Person = await PersonService.GetPersonByIdAsync(Id);
+    }
 }
