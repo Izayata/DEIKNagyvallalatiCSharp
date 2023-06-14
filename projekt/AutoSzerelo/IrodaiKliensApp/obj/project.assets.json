@@ -1794,9 +1794,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\IrodaiKliensApp.csproj",
-      "projectName": "IrodaiKliensApp",
-      "projectPath": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\IrodaiKliensApp.csproj",
+      "projectUniqueName": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\SzereloKliensApp.csproj",
+      "projectName": "SzereloKliensApp",
+      "projectPath": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\SzereloKliensApp.csproj",
       "packagesPath": "C:\\Users\\moonw\\.nuget\\packages\\",
       "outputPath": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\obj\\",
       "projectStyle": "PackageReference",

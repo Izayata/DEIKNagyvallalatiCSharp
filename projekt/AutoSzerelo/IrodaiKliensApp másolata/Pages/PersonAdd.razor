@@ -1,0 +1,41 @@
+﻿@page "/person/add"
+@using SzerverApp.Contract;
+@using IrodaiKliensApp.Services
+@inject IPersonService PersonService
+@inject NavigationManager NavigationManager
+
+
+<h3>Add person</h3>
+
+<EditForm Model="@Person" OnValidSubmit="@HandleValidSubmitAsync">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <InputText @bind-Value="@Person.FirstName" class="form-control" />
+        <ValidationMessage For="() => Person.FirstName"/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">e-mail</label>
+        <InputText @bind-Value="@Person.Email" class="form-control" />
+        <ValidationMessage For="() => Person.Email" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Birth date</label>
+        <InputDate @bind-Value="@Person.ProductionYear" class="form-control" />
+        <ValidationMessage For="() => Person.ProductionYear" />
+    </div>
+
+    <button type="submit" class="btn btn-primary form-control mb-3">Add Person</button>
+</EditForm>
+
+@code {
+    private PersonCar Person { get; set; } = new PersonCar();
+
+    private async Task HandleValidSubmitAsync()
+    {
+        await PersonService.AddPersonAsync(Person!);
+        NavigationManager.NavigateTo("/");
+    }
+}

@@ -1,0 +1,57 @@
+﻿@page "/"
+@using IrodaiKliensApp.Services;
+@using SzerverApp.Contract;
+@inject IPersonService PersonService
+
+
+@*Adatbázisban szereplő emberek kilistázása
+  Amíg null, addig loading üzenetet írunk ki, egyébként a listát írjuk ki
+*@
+@if (People is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h3>People List</h3>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>e-Mail</th>
+                <th>Auto Brand</th>
+                <th>Auto Type</th>
+                <th>Year of Production</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in People)
+            {
+                <tr>
+                    <td>@person.LastName</td>
+                    <td>@person.FirstName</td>
+                    <td>@person.Email</td>
+                    <td>@person.Brand</td>
+                    <td>@person.Type</td>
+                    <td>@person.ProductionYear!.Value.ToShortDateString()</td>
+                    <td><a href="person/@person.Id" class="btn btn-primary">Details</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<PersonCar>? People { get; set; }   //Nullable (?), mert ha lassan kérdeződik le, akkor nem lesz rögtön értéke
+
+    //Életciklusmetódushoz kell
+    //"Razor konstruktor (esetek 99%-ban kell)"
+    protected override async Task OnInitializedAsync()
+    {
+        //Lekérdezés a people listára
+        People = await PersonService.GetAllPeopleAsync();
+    }
+}

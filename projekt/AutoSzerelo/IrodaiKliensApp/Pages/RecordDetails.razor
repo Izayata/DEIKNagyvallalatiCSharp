@@ -1,0 +1,80 @@
+﻿@page "/person/{id:int}"
+@using SzerverApp.Contract
+@using IrodaiKliensApp.Services
+@inject IPersonService PersonService
+@inject NavigationManager NavigationManager
+
+@if (Person is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h3>@Person.FirstName's details</h3>
+    <div class="mb-3">
+        <label class="form-label">Last Name</label>
+        <InputText @bind-Value="@Person.LastName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">First Name</label>
+        <InputText @bind-Value="@Person.FirstName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">e-mail</label>
+        <InputText @bind-Value="@Person.Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Auto Brand</label>
+        <InputText @bind-Value="@Person.FirstName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Auto Type</label>
+        <InputText @bind-Value="@Person.FirstName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Birth date</label>
+        <InputDate @bind-Value="@Person.ProductionYear" class="form-control" />
+    </div>
+    <EditForm Model="@Person" OnValidSubmit="@HandleValidSubmitAsync">
+        
+        
+        
+        
+
+        <button type="submit" class="btn btn-primary form-control mb-3">Save Changes</button>
+    </EditForm>
+
+    <button @onclick="@HandleDeleteAsync" class="btn btn-danger form-control">Delete</button>
+
+    @*<p>Name: @Person.Name</p>
+    <p>e-Mail: @Person.Email</p>
+    <p>Birth date: @Person.BirthDate</p>*@
+}
+
+
+
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private PersonCar? Person { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Person = await PersonService.GetPersonByIdAsync(Id);
+    }
+
+    private async Task HandleValidSubmitAsync()
+    {
+        await PersonService.UpdatePersonAsync(Id, Person!);
+        NavigationManager.NavigateTo("/");
+    }
+
+    private async Task HandleDeleteAsync()
+    {
+        await PersonService.DeletePersonAsync(Id);
+        NavigationManager.NavigateTo("/");
+    }
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n0Yfylxptk5/SP+49N1LNMI1PCjaTUsazACramdaGA1+eBWF7xY4E6GyoH5hqAiE1bcffjOX1mUsr2VyGLm3TQ==",
+  "dgSpecHash": "nyDInCuURUU2AJnjzknLk2jiZNYDfMXW2dSBVK9BR5iUoSSnPV6d5WzGbpyIYs7Puj/APAM3kQrhs7cG/M+6Gw==",
   "success": true,
-  "projectFilePath": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\IrodaiKliensApp.csproj",
+  "projectFilePath": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\SzereloKliensApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moonw\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.15\\microsoft.aspnetcore.authorization.6.0.15.nupkg.sha512",
     "C:\\Users\\moonw\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.15\\microsoft.aspnetcore.components.6.0.15.nupkg.sha512",
