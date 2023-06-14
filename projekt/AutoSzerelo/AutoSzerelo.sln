@@ -5,9 +5,9 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SzerverApp", "SzerverApp\SzerverApp.csproj", "{E4B1BFB8-DD64-4BEB-AB5E-C4FF088C622D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IrodaiKliensApp", "IrodaiKliensApp\IrodaiKliensApp.csproj", "{283E339A-8DF9-44F8-B268-D428EDF88CB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SzereloKliensApp", "IrodaiKliensApp\SzereloKliensApp.csproj", "{283E339A-8DF9-44F8-B268-D428EDF88CB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzerverApp.Contract", "SzerverApp.Contract\SzerverApp.Contract.csproj", "{079E2676-2E1C-423A-8DD7-2457B9FCE5BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SzerverApp.Contract", "SzerverApp.Contract\SzerverApp.Contract.csproj", "{079E2676-2E1C-423A-8DD7-2457B9FCE5BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
