@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SzerverApp.Contract;
 
 namespace SzerverApp
 {

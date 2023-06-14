@@ -1712,6 +1712,16 @@
             "rid": "win"
           }
         }
+      },
+      "SzerverApp.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SzerverApp.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SzerverApp.Contract.dll": {}
+        }
       }
     }
   },
@@ -4695,6 +4705,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "SzerverApp.Contract/1.0.0": {
+      "type": "project",
+      "path": "../SzerverApp.Contract/SzerverApp.Contract.csproj",
+      "msbuildProject": "../SzerverApp.Contract/SzerverApp.Contract.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4707,7 +4722,8 @@
       "Serilog.AspNetCore >= 7.0.0",
       "Serilog.Sinks.File >= 5.0.0",
       "StyleCop.Analyzers >= 1.1.118",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "SzerverApp.Contract >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4741,7 +4757,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\SzerverApp.Contract\\SzerverApp.Contract.csproj": {
+              "projectPath": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\SzerverApp.Contract\\SzerverApp.Contract.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

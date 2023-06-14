@@ -35,9 +35,6 @@ builder.Services.AddDbContext<DemoContext>(
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IGuidService, GuidService>();
-builder.Services.AddSingleton<IPersonRepository, PersonRepository>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
