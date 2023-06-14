@@ -15,7 +15,7 @@ namespace SzerverApp.Contract
         //[MaxLength(25)]
         public string Name { get; set; }
 
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Must be a valid email adress!")]
         public string Email { get; set; }
 
         //[Required]

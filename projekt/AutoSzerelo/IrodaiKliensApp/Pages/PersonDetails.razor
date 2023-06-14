@@ -12,7 +12,10 @@ else
 {
     <h3>@Person.Name's details</h3>
 
+
     <EditForm Model="@Person" OnValidSubmit="@HandleValidSubmitAsync">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
         <div class="mb-3">
             <label class="form-label">Name</label>
             <InputText @bind-Value="@Person.Name" class="form-control"/>
