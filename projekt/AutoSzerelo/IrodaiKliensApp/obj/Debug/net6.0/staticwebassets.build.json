@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fhVuBRYYsA0CCCp+faGBuP3nzXunhqNlk3PrOa7QE8U=",
+  "Hash": "3DMYDQPmUi2Dda+weF1crBJEGBsA8eeP9DqC086osUQ=",
   "Source": "IrodaiKliensApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -3400,6 +3400,40 @@
       "OriginalItemSpec": "C:\\Users\\moonw\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.16\\runtimes\\browser-wasm\\lib\\net6.0\\System.Xml.XPath.XDocument.dll"
     },
     {
+      "Identity": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\SzerverApp.Contract.dll",
+      "SourceId": "IrodaiKliensApp",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SzerverApp.Contract.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\SzerverApp.Contract\\bin\\Debug\\net6.0\\SzerverApp.Contract.dll"
+    },
+    {
+      "Identity": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\SzerverApp.Contract.pdb",
+      "SourceId": "IrodaiKliensApp",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SzerverApp.Contract.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\SzerverApp.Contract\\bin\\Debug\\net6.0\\SzerverApp.Contract.pdb"
+    },
+    {
       "Identity": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WindowsBase.dll",
       "SourceId": "IrodaiKliensApp",
       "SourceType": "Computed",
@@ -5576,6 +5610,23 @@
       "OriginalItemSpec": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Tasks.Parallel.dll"
     },
     {
+      "Identity": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\obj\\Debug\\net6.0\\build-gz\\pcDfao8+.gz",
+      "SourceId": "IrodaiKliensApp",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SzerverApp.Contract.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\SzerverApp.Contract.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\SzerverApp.Contract.dll"
+    },
+    {
       "Identity": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\obj\\Debug\\net6.0\\build-gz\\PEvNkzxT.gz",
       "SourceId": "IrodaiKliensApp",
       "SourceType": "Computed",
@@ -6186,6 +6237,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.FileSystem.dll"
+    },
+    {
+      "Identity": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\obj\\Debug\\net6.0\\build-gz\\TY+QcaYE.gz",
+      "SourceId": "IrodaiKliensApp",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SzerverApp.Contract.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\SzerverApp.Contract.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\SzerverApp.Contract.pdb"
     },
     {
       "Identity": "D:\\Tanulmányok\\Egyetem\\Debrecen\\not_categorized\\Szoftverfejlesztes_cSharp_nyelven_nagyvallalati_kornyezetben_NAY\\SelfProject\\projekt\\AutoSzerelo\\IrodaiKliensApp\\obj\\Debug\\net6.0\\build-gz\\u98anT9h.gz",

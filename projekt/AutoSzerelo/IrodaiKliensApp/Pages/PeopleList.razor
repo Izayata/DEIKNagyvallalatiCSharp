@@ -1,11 +1,50 @@
 ﻿@page "/"
+@using SzerverApp.Contract;
 @inject HttpClient HttpClient
 
-<h3>PeopleList</h3>
 
-@*Adatbázisban szereplő emberek kilistázása*@
+@*Adatbázisban szereplő emberek kilistázása
+  Amíg null, addig loading üzenetet írunk ki, egyébként a listát írjuk ki
+*@
+@if (People is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h3>People List</h3>
 
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>e-Mail</th>
+                <th>Birth date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in People)
+            {
+                <tr>
+                    <td>@person.Name</td>
+                    <td>@person.Email</td>
+                    <td>@person.BirthDate!.Value.ToShortDateString()</td>
+                    <td><a href="person/@person.Id" class="btn btn-primary">Details</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
 @code {
+    private IEnumerable<Person>? People { get; set; }   //Nullable (?), mert ha lassan kérdeződik le, akkor nem lesz rögtön értéke
 
+    //Életciklusmetódushoz kell
+    //"Razor konstruktor (esetek 99%-ban kell)"
+    protected override async Task OnInitializedAsync()
+    {
+        //Lekérdezés a people listára
+        People = await HttpClient.GetFromJsonAsync<IEnumerable<Person>>("People");
+    }
 }

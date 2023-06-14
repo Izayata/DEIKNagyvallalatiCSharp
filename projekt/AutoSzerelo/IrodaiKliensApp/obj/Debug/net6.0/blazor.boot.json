@@ -196,13 +196,15 @@
       "mscorlib.dll": "sha256-C3gpWQMELcHYfrHU\/1agQUvWTtSNs9Ul2suMxcKFnIc=",
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
-      "IrodaiKliensApp.dll": "sha256-qUSsZo5eeYojiheABgUAUgPzMqIz5XMUYsSsUjy7a\/k="
+      "SzerverApp.Contract.dll": "sha256-rkG2\/0DTTRZK\/lQN8LxLULOMnGJcNNcZxJ+y5x5DMWM=",
+      "IrodaiKliensApp.dll": "sha256-pDSgMYCe\/Pm30LKfFfcMTdm\/U83IgvWUhKgYQp753jY="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "IrodaiKliensApp.pdb": "sha256-3vqPor0AbOcm5Qdm6JNeejv9iVuqEPIsvAc8u8VKByg="
+      "SzerverApp.Contract.pdb": "sha256-m54RKWK89\/3uWcW0brVk+o2deT7n4H+Q\/S+yxTzErmo=",
+      "IrodaiKliensApp.pdb": "sha256-xsqkmzrBvtv0EA9Cc\/ML9N85083jaRNzLA6KBhbg71M="
     },
     "runtime": {
       "dotnet.6.0.16.epwwl9jwj3.js": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",
