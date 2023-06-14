@@ -13,17 +13,17 @@ namespace IrodaiKliensApp.Services
             _httpClient = httpClient;
         }
 
-        public Task<IEnumerable<Person>> GetAllPeopleAsync()
+        public Task<IEnumerable<PersonCar>> GetAllPeopleAsync()
         {
-            return _httpClient.GetFromJsonAsync<IEnumerable<Person>>("People");
+            return _httpClient.GetFromJsonAsync<IEnumerable<PersonCar>>("People");
         }
 
-        public Task<Person?> GetPersonByIdAsync(int id)
+        public Task<PersonCar?> GetPersonByIdAsync(int id)
         {
-            return _httpClient.GetFromJsonAsync<Person?>($"People/{id}");
+            return _httpClient.GetFromJsonAsync<PersonCar?>($"People/{id}");
         }
 
-        public async Task UpdatePersonAsync(int id, Person person)
+        public async Task UpdatePersonAsync(int id, PersonCar person)
         {
             await _httpClient.PutAsJsonAsync($"People/{id}", person);
         }
@@ -33,7 +33,7 @@ namespace IrodaiKliensApp.Services
             await _httpClient.DeleteAsync($"People/{id}");
         }
 
-        public async Task AddPersonAsync(Person person)
+        public async Task AddPersonAsync(PersonCar person)
         {
             await _httpClient.PostAsJsonAsync("People", person);
         }

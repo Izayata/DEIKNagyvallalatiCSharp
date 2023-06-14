@@ -23,7 +23,7 @@ namespace SzerverApp.Controllers
         ///VÉGPONTOK DEFINIÁLÁSA
         //GET METÓDUS - GetAll()
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Person>>> GetAll()
+        public async Task<ActionResult<IEnumerable<PersonCar>>> GetAll()
         {
             _logger.LogInformation("People endpoint 'GetAll' was called");
             //var people = _personRepository.GetAll();
@@ -34,7 +34,7 @@ namespace SzerverApp.Controllers
 
         //GET METÓDUS - GetSinglePerson(int id)
         [HttpGet("{id}")]
-        public async Task<ActionResult<Person>> GetSinglePerson(int id)
+        public async Task<ActionResult<PersonCar>> GetSinglePerson(int id)
         {
             //var person = _personRepository.Get(id);
             var person = await _demoContext.People.FindAsync(id);
@@ -67,7 +67,7 @@ namespace SzerverApp.Controllers
 
         //ADD METÓDUS - Post()
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Person person)
+        public async Task<IActionResult> Post([FromBody] PersonCar person)
         {
             _demoContext.People.Add(person);
             await _demoContext.SaveChangesAsync();
@@ -77,7 +77,7 @@ namespace SzerverApp.Controllers
 
         //UPDATE METÓDUS - Put()
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Person person)
+        public async Task<IActionResult> Put(int id, [FromBody] PersonCar person)
         {
             if (id != person.Id)
             { 
@@ -91,9 +91,9 @@ namespace SzerverApp.Controllers
             }
 
 
-            existingPerson.Name = person.Name;
+            existingPerson.FirstName = person.FirstName;
             existingPerson.Email = person.Email;
-            existingPerson.BirthDate = person.BirthDate;
+            existingPerson.ProductionYear = person.ProductionYear;
             _demoContext.SaveChangesAsync();
             
             return NoContent(); //lehet Ok() is, általában a delete esetén használják

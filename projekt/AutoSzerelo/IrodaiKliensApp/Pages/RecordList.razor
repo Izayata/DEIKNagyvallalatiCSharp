@@ -18,9 +18,12 @@ else
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Last Name</th>
+                <th>First Name</th>
                 <th>e-Mail</th>
-                <th>Birth date</th>
+                <th>Auto Brand</th>
+                <th>Auto Type</th>
+                <th>Year of Production</th>
                 <th></th>
             </tr>
         </thead>
@@ -28,9 +31,12 @@ else
             @foreach (var person in People)
             {
                 <tr>
-                    <td>@person.Name</td>
+                    <td>@person.LastName</td>
+                    <td>@person.FirstName</td>
                     <td>@person.Email</td>
-                    <td>@person.BirthDate!.Value.ToShortDateString()</td>
+                    <td>@person.Brand</td>
+                    <td>@person.Type</td>
+                    <td>@person.ProductionYear!.Value.ToShortDateString()</td>
                     <td><a href="person/@person.Id" class="btn btn-primary">Details</a></td>
                 </tr>
             }
@@ -39,7 +45,7 @@ else
 }
 
 @code {
-    private IEnumerable<Person>? People { get; set; }   //Nullable (?), mert ha lassan kérdeződik le, akkor nem lesz rögtön értéke
+    private IEnumerable<PersonCar>? People { get; set; }   //Nullable (?), mert ha lassan kérdeződik le, akkor nem lesz rögtön értéke
 
     //Életciklusmetódushoz kell
     //"Razor konstruktor (esetek 99%-ban kell)"

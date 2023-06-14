@@ -12,7 +12,7 @@ namespace SzerverApp
 
         //Migrációhoz ide fel kell venni az osztályokat
 
-        public virtual DbSet<Person> People { get; set; } //People tábla felvétele az adatbázisba (reprezentálás)
+        public virtual DbSet<PersonCar> People { get; set; } //People tábla felvétele az adatbázisba (reprezentálás)
         
         public virtual DbSet<Item> Item { get; set; } //Item tábla felvétele az adatbázisba (reprezentálás)
 

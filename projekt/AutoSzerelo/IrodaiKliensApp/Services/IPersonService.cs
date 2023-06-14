@@ -4,14 +4,14 @@ namespace IrodaiKliensApp.Services
 {
     public interface IPersonService
     {
-        Task<IEnumerable<Person>> GetAllPeopleAsync();
+        Task<IEnumerable<PersonCar>> GetAllPeopleAsync();
 
-        Task<Person?> GetPersonByIdAsync(int id);
+        Task<PersonCar?> GetPersonByIdAsync(int id);
 
-        Task UpdatePersonAsync(int id, Person person);
+        Task UpdatePersonAsync(int id, PersonCar person);
 
         Task DeletePersonAsync(int id);
 
-        Task AddPersonAsync(Person person);
+        Task AddPersonAsync(PersonCar person);
     }
 }
