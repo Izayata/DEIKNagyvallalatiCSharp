@@ -12,7 +12,7 @@ using SzerverApp;
 namespace SzerverApp.Migrations
 {
     [DbContext(typeof(DemoContext))]
-    [Migration("20230614202141_Init")]
+    [Migration("20230614204454_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -36,19 +36,29 @@ namespace SzerverApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime?>("BirthDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("AutoBrand")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DuplicatedId")
-                        .HasColumnType("int");
+                    b.Property<string>("AutoType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ProductionYear")
+                        .IsRequired()
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

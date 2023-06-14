@@ -9,18 +9,29 @@ namespace SzerverApp.Contract
         //[Key] //Elsődleges kulcs beállítása
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //automatikus kulcs generálás
         public int Id { get; set; }
-        public int DuplicatedId { get; set; }
+        //public int DuplicatedId { get; set; }
 
         [Required]
         //[MaxLength(25)]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
+        [Required]
+        public string AutoBrand { get; set; }
+
+        [Required]
+        public string AutoType { get; set; } 
 
         [EmailAddress(ErrorMessage = "Must be a valid email adress!")]
         public string Email { get; set; }
 
-        //[Required]
+        //public string State { get; set; }
+
+        [Required]
         //[Range(typeof(DateTime), "1990-01-01", "2000-01-01")]
-        public DateTime? BirthDate { get; set; } //A ? miatt nullable lesz ez a field (nem kötelező kitölteni), a [Required] annotáció felülírja a ?-ecskét
+        public DateTime? ProductionYear { get; set; } //A ? miatt nullable lesz ez a field (nem kötelező kitölteni), a [Required] annotáció felülírja a ?-ecskét
 
 
 

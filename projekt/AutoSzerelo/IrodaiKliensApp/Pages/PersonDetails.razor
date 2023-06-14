@@ -10,7 +10,7 @@
 }
 else
 {
-    <h3>@Person.Name's details</h3>
+    <h3>@Person.FirstName's details</h3>
 
 
     <EditForm Model="@Person" OnValidSubmit="@HandleValidSubmitAsync">
@@ -18,7 +18,7 @@ else
         <ValidationSummary />
         <div class="mb-3">
             <label class="form-label">Name</label>
-            <InputText @bind-Value="@Person.Name" class="form-control"/>
+            <InputText @bind-Value="@Person.FirstName" class="form-control"/>
         </div>
         <div class="mb-3">
             <label class="form-label">e-mail</label>
@@ -26,7 +26,7 @@ else
         </div>
         <div class="mb-3">
             <label class="form-label">Birth date</label>
-            <InputDate @bind-Value="@Person.BirthDate" class="form-control" />
+            <InputDate @bind-Value="@Person.ProductionYear" class="form-control" />
         </div>
 
         <button type="submit" class="btn btn-primary form-control mb-3">Save Changes</button>

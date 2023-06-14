@@ -18,9 +18,12 @@ else
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Last Name</th>
+                <th>First Name</th>
                 <th>e-Mail</th>
-                <th>Birth date</th>
+                <th>Auto Brand</th>
+                <th>Auto Type</th>
+                <th>Year of Production</th>
                 <th></th>
             </tr>
         </thead>
@@ -28,10 +31,13 @@ else
             @foreach (var person in People)
             {
                 <tr>
-                    <td>@person.Name</td>
+                    <td>@person.LastName</td>
+                    <td>@person.FirstName</td>
                     <td>@person.Email</td>
-                    <td>@person.BirthDate!.Value.ToShortDateString()</td>
-                    <td><a href="person/@person.Id" class="btn btn-primary">Details</a></td>
+                    <td>@person.AutoBrand</td>
+                    <td>@person.AutoType</td>
+                    <td>@person.ProductionYear!.Value.ToShortDateString()</td>
+                    <td><a href="person/@person.Id" class="btn btn-primary">Frissítés</a></td>
                 </tr>
             }
         </tbody>

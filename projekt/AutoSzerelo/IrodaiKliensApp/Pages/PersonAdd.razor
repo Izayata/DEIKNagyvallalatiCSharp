@@ -12,8 +12,8 @@
     <ValidationSummary />
     <div class="mb-3">
         <label class="form-label">Name</label>
-        <InputText @bind-Value="@Person.Name" class="form-control" />
-        <ValidationMessage For="() => Person.Name" />
+        <InputText @bind-Value="@Person.FirstName" class="form-control" />
+        <ValidationMessage For="() => Person.FirstName" />
     </div>
     <div class="mb-3">
         <label class="form-label">e-mail</label>
@@ -21,7 +21,7 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Birth date</label>
-        <InputDate @bind-Value="@Person.BirthDate" class="form-control" />
+        <InputDate @bind-Value="@Person.ProductionYear" class="form-control" />
     </div>
 
     <button type="submit" class="btn btn-primary form-control mb-3">Add Person</button>

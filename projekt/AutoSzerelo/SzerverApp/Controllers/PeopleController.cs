@@ -91,9 +91,9 @@ namespace SzerverApp.Controllers
             }
 
 
-            existingPerson.Name = person.Name;
+            existingPerson.FirstName = person.FirstName;
             existingPerson.Email = person.Email;
-            existingPerson.BirthDate = person.BirthDate;
+            existingPerson.ProductionYear = person.ProductionYear;
             _demoContext.SaveChangesAsync();
             
             return NoContent(); //lehet Ok() is, általában a delete esetén használják
