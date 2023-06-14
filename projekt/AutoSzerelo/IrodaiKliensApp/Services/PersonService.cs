@@ -22,5 +22,15 @@ namespace IrodaiKliensApp.Services
         {
             return _httpClient.GetFromJsonAsync<Person?>($"People/{id}");
         }
+
+        public async Task UpdatePersonAsync(int id, Person person)
+        {
+            await _httpClient.PutAsJsonAsync($"People/{id}", person);
+        }
+
+        public async Task DeletePersonAsync(int id)
+        {
+            await _httpClient.DeleteAsync($"People/{id}");
+        }
     }
 }
