@@ -32,5 +32,10 @@ namespace IrodaiKliensApp.Services
         {
             await _httpClient.DeleteAsync($"People/{id}");
         }
+
+        public async Task AddPersonAsync(Person person)
+        {
+            await _httpClient.PostAsJsonAsync("People", person);
+        }
     }
 }

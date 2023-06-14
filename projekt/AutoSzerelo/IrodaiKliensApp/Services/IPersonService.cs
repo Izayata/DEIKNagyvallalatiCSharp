@@ -11,5 +11,7 @@ namespace IrodaiKliensApp.Services
         Task UpdatePersonAsync(int id, Person person);
 
         Task DeletePersonAsync(int id);
+
+        Task AddPersonAsync(Person person);
     }
 }
